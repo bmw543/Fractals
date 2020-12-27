@@ -22,7 +22,7 @@ max_iterations = 1000 # if the recursive function does not diverge after this ma
 frames = 200 # number of frames in the GIF
 outside_layers = 15 # if a pixel takes more than this number of iterations, it is a constant color
 
-generate_new_images = True
+generate_new_images = True # set to False if only a new GIF should be created with existing images
 
 fp_images = 'C:/Users/user/example/filepath'
 images_common_name = 'julia'
