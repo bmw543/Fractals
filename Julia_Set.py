@@ -1,3 +1,14 @@
+# The Julia Set
+# 26 Dec 2020
+
+# The Julia set is the set of all complex values z such that when the formula
+# z^2 + c
+# (the complex value being the initial z value) is iterated an unlimited number of times, it's complex magnitude does not diverge.
+
+# Each value of c generates a unique Julia set
+# Represented visually, the complex numbers contained in a given set are colored a predetermined color (green in the example program), and the values outside the set are assigned different colors depending on the number of iterations before divergence is confirmed.
+# This program creates an animated GIF of the julia sets for values of c along the complex unit circle, divided into more or fewer values depending on the frames parameter.
+
 from PIL import Image, ImageDraw, ImageFont
 import math
 import imageio
@@ -7,7 +18,7 @@ import numpy as np
 
 length = 4 # length of the real and imaginary axes - smaller values will create a zoomed image
 pixels = 200 # length of the x and y axes in pixels
-max_iterations = 1000 # if the recursive function does not diverge after this many iterations, it is assumed to converge
+max_iterations = 1000 # if the recursive function does not diverge after this many iterations, it is assumed to be in the set
 frames = 200 # number of frames in the GIF
 outside_layers = 15 # if a pixel takes more than this number of iterations, it is a constant color
 
@@ -26,7 +37,7 @@ red = (0, int(80.9 * 255 / 100), int(69.8 * 255 / 100))
 def iterations(zp, c): # determine how many iterations of the form z = z^2 + c before the value diverges
     z = zp
     n = 0
-    while abs(z) <= 2 and n <= max_iterations:
+    while abs(z) <= 2 and n <= max_iterations: # if the magnitude of the complex function value exceeds 2, it is guaranteed to diverge
         z = (z * z) + c
         n += 1
     return n
