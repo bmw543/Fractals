@@ -13,11 +13,9 @@ outside_layers = 15 # if a pixel takes more than this number of iterations, it i
 
 generate_new_images = True
 
-fp_images = 'C:/Users/Thomas/Desktop/Coding/Fractals/Julia Set/Images'
+fp_images = 'C:/Users/user/example/filepath'
 images_common_name = 'julia'
-fp_gifs = 'C:/Users/Thomas/Desktop/Coding/Fractals/Julia Set/Gifs/julia_set.gif'
-
-fnt = ImageFont.truetype("Courier Prime Code.ttf", 20) # text font
+fp_gifs = 'C:/Users/user/example/filepath/julia_set.gif'
 
 green = (120 * 255 / 360, 75.5 * 255 / 100, 54.5 * 255 / 100)
 white = (0, 0, 255)
