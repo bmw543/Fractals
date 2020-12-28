@@ -1,4 +1,4 @@
-# The nebulabrot
+# Nebulabrot
 
 # The 'nebulabrot' is a variation of the Mandelbrot set - instead of graphing the complex values that are in the Mandelbrot set, the nebulabrot traces the paths that values _not_ in the set take as they diverge
 # When using a single color, the nebulabrot is a probability map of the divergence paths - a random complex value within the specified image boundaries is chosen, and if it is not in the set, its path is graphed
